@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Best Friend 💙</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, #020111 0%, #191621 100%);
+    color: white;
+    text-align: center;
+}
+
+/* Stars */
+.stars {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        50px 100px white,
+        150px 200px white,
+        300px 150px white,
+        400px 80px white,
+        600px 300px white,
+        800px 120px white,
+        1000px 250px white,
+        1200px 180px white,
+        1400px 220px white,
+        1600px 100px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+    border-radius: 50%;
+    box-shadow: 0 0 40px #fff;
+}
+
+/* Shooting Star */
+.shooting-star {
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(-45deg, white, rgba(255,255,255,0));
+    animation: shoot 5s linear infinite;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(1200px) translateY(400px);
+        opacity: 0;
+    }
+}
+
+/* Message */
+.content {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff; }
+    to { text-shadow: 0 0 20px #00ccff; }
+}
+
+p {
+    font-size: 1.5em;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div class="moon"></div>
+<div class="shooting-star"></div>
+
+<div class="content">
+    <h1>To My Best Friend 💙</h1>
+    <p>
+        You are the brightest star in my sky.<br>
+        Thank you for always being there.<br>
+        Our friendship shines forever ✨
+    </p>
+</div>
+
+<!-- Theme Song -->
+<audio autoplay loop>
+    <source src="theme.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
